@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
   
   const validation = ticketSchema.safeParse(body);
   if (!validation.success) {
-    return NextResponse.json({ error: validation.error.errors }, { status: 400 });
+    return NextResponse.json({ error: validation.error.issues }, { status: 400 });
   }
   
   const newTicket: Ticket = {

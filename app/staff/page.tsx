@@ -5,7 +5,7 @@ import { ArrowLeft, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 
 export default function StaffPortal() {
-  const [tickets, setTickets] = useState([]);
+  const [tickets, setTickets] = useState<any[]>([]);
   const [staff, setStaff] = useState<Array<{id: string; name: string}>>([]);
   const [filter, setFilter] = useState('all');
   const [showAddStaff, setShowAddStaff] = useState(false);
